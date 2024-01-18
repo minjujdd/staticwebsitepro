@@ -1,0 +1,123 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, img {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply a box-sizing border-box model to all elements */
+* {
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    margin: 100px;
+    margin-left: 200px;
+    background-color: darkgray;
+}
+
+/* Header */
+#header {
+    background-color: white;
+    height: 300px;
+}
+
+/* Navigation */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem;
+}
+
+.logo {
+    width: 200px;
+}
+
+.searchgroup {
+    width: 100%;
+    font-size: 13px;
+    height: 46px;
+}
+
+#query {
+    width: 70%;
+    height: 70px;
+    font-size: 30px;
+}
+
+.btn {
+    width: 70px;
+    height: 70px;
+    background-color: whitesmoke;
+}
+
+/* Menu */
+/* Menu */
+.menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    background-color: lightskyblue;
+    padding: 30px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    flex: 1; /* Equal width for each menu item */
+}
+
+.menu a:hover {
+    color: blue;
+}
+
+.menu a:active {
+    color: rgb(0, 0, 0);
+}
+
+.menu a.current {
+    color: aqua;
+}
+
+.content {
+    display: flex;
+    overflow-y: auto;
+    gap: 3rem;
+    padding: 2rem 4rem;
+    /* height = vh - nav padding - logo font size - footer height */
+    height: calc(100vh - 2rem - 1.5rem - 200px);
+  }
+  
+  /*  a */
+  .a {
+      flex: 2;
+  }
+  
+  .a > img {
+    float: left;
+    width: 420px;
+    vertical-align: top;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .text-content p {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: justify;
+  }
+  
+  /*  b */
+  .b {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: flex-start;
+    height: min-content;
+  }
+  
