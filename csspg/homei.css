@@ -9,74 +9,56 @@ body, h1, h2, h3, p, img {
     box-sizing: border-box;
 }
 
+/* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
 
-
-a {
-    color: #007bff; 
-}
-a:hover {
-    color: #0056b3; 
-}
-
-/* Body */
+/* Global font */
 body {
-    margin: 100px;
-    margin-left: 200px;
     font-family: 'Noto Sans KR', sans-serif;
-    background-color: #f5f5f5; 
-    color: #333; 
+    background-color: #f5f5f5; /* Light grey background */
+    color: #333; /* Dark grey text */
+    margin-left: 200px; /* Adjusted left margin */
+    margin-right: 200px; /* Added right margin for symmetry */
 }
 
 /* Header */
 #header {
     background-color: white;
-    height: 300px;
+    padding: 20px 0; /* Padding for breathing space */
 }
-.nav, section, .btn, #query {
-    border-radius: 8px; 
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
-}
-
-.btn {
-    border: none;
-    cursor: pointer;
-    background-color: #007bff;
-    color: white; 
-}
-.btn:hover {
-    background-color: #0056b3;
-}
-
 
 /* Navigation */
 .nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 3rem;
+    padding: 1rem; /* Reduced padding */
 }
 
 .logo {
-    width: 200px;
+    width: 200px; /* Logo width */
 }
 
 .searchgroup {
-    width: 100%;
-    font-size: 13px;
-    height: 46px;
+    display: flex; /* Align input and button */
+    align-items: center; /* Center items vertically */
 }
 
 #query {
-    width: 70%;
-    height: 70px;
-    font-size: 30px;
+    width: calc(100% - 80px); /* Search input width minus button width */
+    height: 40px; /* Reduced height for aesthetics */
+    font-size: 16px; /* Adjusted font size */
+    padding: 0 10px; /* Padding inside the input */
+    margin-right: 10px; /* Space between input and button */
 }
 
 .btn {
-    width: 70px;
-    height: 90px;
-    background-color: whitesmoke;
+    width: 70px; /* Button width */
+    height: 40px; /* Button height matching input */
+    background-color: #007bff; /* Button color */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    cursor: pointer; /* Cursor pointer */
 }
 
 /* Menu */
@@ -84,64 +66,52 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 100%;
     background-color: lightskyblue;
-    padding: 30px;
+    padding: 10px 0; /* Reduced padding */
+    margin-top: 20px; /* Added margin on top */
 }
 
 .menu a {
     text-decoration: none;
     color: black;
-    text-align: center;
     flex: 1; /* Equal width for each menu item */
 }
 
 .menu a:hover {
-    color: blue;
+    color: blue; /* Hover color */
 }
 
-.menu a:active {
-    color: rgb(0, 0, 0);
-}
-
-.menu a.current {
-    color: aqua;
-}
-
+/* Sections */
 section {
-    padding: 2em;
-    background-color:white;
-    color:black;
-    }
-/* footer */
-footer{
-    height:50px;
-}
-    
-    a, .btn {
-        transition: color 0.3s ease, background-color 0.3s ease;
-    }
-    
-    a:hover, .btn:hover {
-        opacity: 0.8;
-    }
-    
-footer img{
-    width:60px;
-    height:20%;
-    right:20px;
-    bottom:0;
-    position:fixed;
-}
-#intro,#tourist-spots,#history,#contact{
-    background-color:darkgray;
-    padding:20px;
-    margin-bottom:20px;
+    padding: 20px; /* Section padding */
+    background-color: white; /* Background color */
+    color: black; /* Text color */
+    margin-bottom: 20px; /* Space between sections */
 }
 
+/* Footer */
+footer {
+    background-color: #333; /* Dark footer background */
+    color: white; /* Light text color for contrast */
+    padding: 10px 0; /* Padding top and bottom */
+    text-align: center; /* Center text */
+}
 
-#tourist-spots img{
-    display:inline-block;
-    width:30%;
-    height:300px;
+footer p {
+    margin-bottom: 10px; /* Space below the paragraph */
+}
+
+footer img {
+    width: 60px; /* Width of the footer image */
+    position: relative; /* Relative positioning */
+    bottom: -20px; /* Adjust bottom position */
+}
+
+/* Transition effects */
+a, .btn {
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+a:hover, .btn:hover {
+    opacity: 0.8; /* Opacity on hover */
 }
