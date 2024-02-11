@@ -30,7 +30,7 @@ body {
 /* Navigation */
 .nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 1rem; /* Reduced padding */
 }
@@ -80,6 +80,47 @@ body {
 .menu a:hover {
     color: blue; /* Hover color */
 }
+#city-header {
+    background: url('../imgs/GT_bella.png') no-repeat center center;
+    background-size: cover;
+    height: 628px; /* Adjust based on your image's aspect ratio */
+    position: relative;
+    color: white;
+}
+
+.header-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay for better text visibility */
+    display: flex;
+    justify-content: space-between; /* This will position the bulletin board on the right */
+    align-items: center; /* This will vertically center the text and bulletin board */
+    padding: 0 3%; /* Padding on the sides */
+}
+
+.city-name {
+    font-size: 50px;
+    font-weight: bold;
+    /* Position your logo text or image here */
+}
+
+.bulletin-board {
+    background: rgba(0, 0, 0, 0.7); /* Darker background for the bulletin board */
+    padding: 20px;
+    border-radius: 5px; /* Optional: Adds rounded corners to the bulletin board */
+}
+
+.more-link {
+    color: #00BFFF;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+.more-link:hover {
+    color: #fff;
+}
 
 /* Sections */
 section {
@@ -90,20 +131,11 @@ section {
 }
 
 /* Footer */
-footer {
-    background-color: #333; /* Dark footer background */
-    color: white; /* Light text color for contrast */
-    padding: 10px 0; /* Padding top and bottom */
-    text-align: center; /* Center text */
-}
 
-footer p {
-    margin-bottom: 10px; /* Space below the paragraph */
-}
 
 footer img {
     width: 60px; /* Width of the footer image */
-    position: relative; /* Relative positioning */
+    position: fixed; /* Relative positioning */
     bottom: -20px; /* Adjust bottom position */
 }
 
