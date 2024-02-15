@@ -12,9 +12,16 @@ body, h1, h2, h3, p, img {
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Protest+Riot&family=Protest+Strike&display=swap');
+
+
+
 /* Global font */
 body {
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: "Protest Riot";
+    font-weight: 400;
+    font-style: normal;
     background-color: #f5f5f5; /* Light grey background */
     color: #333; /* Dark grey text */
     margin-left: 200px; /* Adjusted left margin */
@@ -83,9 +90,13 @@ body {
 #city-header {
     background: url('../imgs/GT_bella.png') no-repeat center center;
     background-size: cover;
-    height: 628px; /* Adjust based on your image's aspect ratio */
+    height:500px; /* Adjust based on your image's aspect ratio */
     position: relative;
     color: white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    
 }
 
 .header-overlay {
@@ -104,13 +115,83 @@ body {
     font-weight: bold;
     /* Position your logo text or image here */
 }
-
-.bulletin-board {
-    background: rgba(0, 0, 0, 0.7); /* Darker background for the bulletin board */
-    padding: 20px;
-    border-radius: 5px; /* Optional: Adds rounded corners to the bulletin board */
+.header-content{
+    text-align:center;
+}
+.header-content a {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #007bff; /* Blue background */
+    color: white; /* White text */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    position:fixed;
+    right:9%;
+    
+}
+.header-content a.Q { /* Specific styles for the FAQ link */
+    background-color: #28a745; 
+right:9%;
+    /* Green background */
 }
 
+.header-content a:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+
+
+#tourist-spots {
+    background-color: darkgrey;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  #tourist-spots h2 {
+    margin-bottom: 20px;
+  }
+  
+  .image-collage {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .image-collage img {
+    width: 20%; /* or any other size */
+    border-radius: 5px; /* for rounded corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* for a subtle shadow */
+  }
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  #history{
+    background-image:url('../imgs/GT_flower4.jpeg');
+    background-size: cover;
+    height:400px;
+  }
+
+  #history h2,p{
+    text-decoration:none;
+    color:white;
+    font-family: 'Protest Strike', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  }
+  #history h2{
+    font-size:24px;
+  }
+  #history p{
+    font-size:18px;
+  }
+  .bulletin-board {
+    animation: fadeIn 2s ease-out; /* Apply the fade-in animation */
+  }
 .more-link {
     color: #00BFFF;
     text-decoration: none;
@@ -127,7 +208,6 @@ section {
     padding: 20px; /* Section padding */
     background-color: white; /* Background color */
     color: black; /* Text color */
-    margin-bottom: 20px; /* Space between sections */
 }
 
 /* Footer */
@@ -139,11 +219,92 @@ footer img {
     bottom: -20px; /* Adjust bottom position */
 }
 
-/* Transition effects */
-a, .btn {
-    transition: color 0.3s ease, background-color 0.3s ease;
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (max-width: 600px) {
+    body {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .nav, .menu {
+        flex-direction: column;
+    }
+
+    .logo, .searchgroup, .menu a {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #query, .btn {
+        width: 100%;
+    }
+
+    .image-collage img {
+        width: 30%;
+    }
+
+    #city-header {
+        height: 300px; 
+    }
+
+    .header-content a {
+        position: static;
+        margin-bottom: 10px;
+        width: auto; /* Adjust width for smaller screens */
+    }
+
+    .bulletin-board, footer img {
+        display: none; /* Hide elements that may not fit well on small screens */
+    }
+   
 }
 
-a:hover, .btn:hover {
-    opacity: 0.8; /* Opacity on hover */
+/* Tablets (portrait and landscape) ----------- */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    body {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    .nav, .menu {
+        flex-direction: row;
+    }
+
+    .logo, .searchgroup, .menu a {
+        width: auto;
+    }
+
+    #query {
+        width: calc(100% - 100px); /* Adjust search input width */
+    }
+
+    .image-collage img {
+        width: 33.3333%; /* Three images per row */
+    }
+
+    #city-header {
+        height: 400px; /* Adjust height for medium screens */
+    }
+
+    .header-content a {
+        position: static;
+        width: auto; /* Adjust width for medium screens */
+    }
+
+    .bulletin-board {
+        display: block;
+    }
+
+    footer img {
+        display: block;
+    }
 }
+
+/* Additional styling for landscape orientation on tablets */
+@media only screen and (min-width: 601px) and (max-width: 1024px) and (orientation: landscape) {
+    #city-header {
+        height: 200px; /* Further adjust height for landscape orientation */
+    }
+}
+

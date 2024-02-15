@@ -83,106 +83,46 @@ body {
 }
 
 /* body */
-
-
-.coo{
-    font-size:16px;
-    font-weight:400;
-    border:0;
-    background:honeydew;
-    color:black;
-    line-height:1.35em;
-    margin:0px 0px 17px;
-    padding:18px 9px;
+.compass{
     position:absolute;
-    height:200px;
-    width:200px;
-    top:800px;
-    left:400px;
+    top:83%;
+    left:39.5%;
+    width:30%;
 }
-
-.co{
-    font-size:16px;
-    font-weight:400;
-    border:0;
-    background:honeydew;
-    color:black;
-    line-height:1.35em;
-    margin:0px 0px 17px;
-    padding:18px 9px;
-    position:absolute;
-    height:200px;
-    width:200px;
-    top:800px;
-    left:700px;
-}
-
-.cl{
-    font-size:16px;
-    font-weight:400;
-    border:0;
-    background:honeydew;
-    color:black;
-    line-height:1.35em;
-    margin:0px 0px 17px;
-    padding:18px 9px;
-    position:absolute;
-    height:200px;
-    width:200px;
-    top:800px;
-    left:1000px;
-}
-
-
-
-.c{
-    font-size:16px;
-    font-weight:400;
-    border:0;
-    background:honeydew;
-    color:black;
-    line-height:1.35em;
-    margin:0px 0px 17px;
-    padding:18px 9px;
-    position:absolute;
-    height:200px;
-    width:200px;
-    top:500px;
-    left:400px;
-}
-
-.o{
-    font-size:16px;
-    font-weight:400;
-    border:0;
-    background:honeydew;
-    color:black;
-    line-height:1.35em;
-    margin:0px 0px 17px;
-    padding:18px 9px;
-    position:absolute;
-    height:200px;
-    width:200px;
-    top:500px;
-    left:700px;
-}
-
-.cool{
-    font-size:16px;
-    font-weight:400;
-    border:0;
-    background:honeydew;
-    color:black;
-    line-height:1.35em;
-    margin:0px 0px 17px;
-    padding:18px 9px;
-    position:absolute;
-    height:200px;
-    width:200px;
-    top:500px;
-    left:1000px;
-}
-
-footer{
+.grid-container {
     background-color:white;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* This creates two columns */
+    grid-gap: 10px; /* Adjust the gap size as needed */
+    padding:5%;
+}
+
+.grid-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    color: white;
+    text-align: center;
+    padding: 10px 0; /* Adjust padding as needed */
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Stack the images on smaller screens */
+    }
 }
