@@ -90,7 +90,7 @@ body {
     width:30%;
 }
 .grid-container {
-    background-color:white;
+    background-color:#1C0A00;
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* This creates two columns */
     grid-gap: 10px; /* Adjust the gap size as needed */

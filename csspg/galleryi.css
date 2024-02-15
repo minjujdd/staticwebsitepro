@@ -110,10 +110,10 @@ body {
 
 @keyframes rotate-axis {
     from {
-        transform: rotateZ(350deg) perspective(800px) rotateY(0deg);
+        transform: rotateZ(365deg) perspective(800px) rotateY(0deg);
     }
     to {
-        transform: rotateZ(350deg) perspective(800px) rotateY(360deg);
+        transform: rotateZ(365deg) perspective(800px) rotateY(360deg);
     }
 }
 
