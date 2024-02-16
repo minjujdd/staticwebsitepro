@@ -103,7 +103,7 @@ body {
 .satellites {
     position:relative;
    top:30%;
-    animation: rotate-axis 10s linear infinite;
+    animation: rotate-axis 50s linear infinite;
     transform-style: preserve-3d;
     display: flex;
     justify-content: center;
@@ -122,4 +122,51 @@ body {
     position: absolute;
     width: 100px;
     transform: rotateY(calc(var(--i) * 1deg)) translateZ(500px);
+}
+
+@media (max-width: 1024px) { /* Tablet adjustments */
+    .logo, #query, .btn {
+        width: auto; /* Adjust sizes for smaller screens */
+    }
+
+    .searchgroup {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav, .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .satellite {
+        width: 80px; /* Adjust image size for tablets */
+    }
+}
+
+@media (max-width: 768px) { /* Mobile adjustments */
+    body {
+        margin: 20px;
+    }
+
+    #header {
+        height: auto;
+    }
+
+    .logo, #query, .btn {
+        width: auto; /* Adjust sizes for very small screens */
+    }
+
+    .searchgroup, .nav, .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .satellites {
+        transform: scale(0.8); /* Scale down the gallery for mobile */
+    }
+
+    .satellite {
+        width: 60px; /* Adjust image size for mobiles */
+    }
 }
