@@ -130,3 +130,70 @@ body {
  .line img{
     width:50%;
  }
+
+
+ /* Tablet Devices */
+@media (max-width: 1024px) {
+    body {
+        margin: 50px 10px; /* Adjust margins for tablet */
+    }
+
+    .nav, .menu {
+        flex-direction: column; /* Stack nav items vertically */
+    }
+
+    .logo {
+        width: 150px; /* Adjust logo size for tablet */
+    }
+
+    .searchgroup, #query, .btn {
+        width: 100%; /* Full width for search elements */
+        height: 50px; /* Adjust height for tablet */
+        font-size: 20px; /* Adjust font size for readability */
+    }
+
+    .menu a {
+        padding: 10px 0; /* Increase padding for easier tap targets */
+    }
+
+    .k, .g, .line {
+        flex-direction: column; /* Stack horizontally displayed elements */
+    }
+
+    .k iframe, .g iframe, .line img {
+        width: 100%; /* Full width for images and iframes */
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+    body {
+        margin: 20px 5px; /* Adjust margins for mobile */
+    }
+
+    .nav, .menu {
+        flex-direction: column; /* Stack nav items vertically */
+    }
+
+    .logo {
+        width: 120px; /* Adjust logo size for mobile */
+    }
+
+    .searchgroup, #query, .btn {
+        width: 100%; /* Full width for search elements */
+        height: 40px; /* Adjust height for mobile */
+        font-size: 18px; /* Adjust font size for readability */
+    }
+
+    .menu a {
+        padding: 8px 0; /* Adjust padding for easier tap targets */
+    }
+
+    .k, .g, .line {
+        flex-direction: column; /* Ensure elements stack vertically */
+    }
+
+    .k iframe, .g iframe, .line img {
+        width: 100%; /* Ensure images and iframes are full width */
+    }
+}
