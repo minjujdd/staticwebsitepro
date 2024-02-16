@@ -1,3 +1,18 @@
+:root {
+    /* Color scheme */
+    --background-color: #f0f0f0;
+    --primary-color: #007bff;
+    --text-color: #ffffff;
+
+    /* Font sizing */
+    --font-large: 96px;
+    --font-medium: 24px;
+    --font-small: 20px;
+    --font-mobile-large: 48px;
+    --font-mobile-medium: 18px;
+    --font-mobile-small: 16px;
+}
+
 /* Base styles */
 body, html {
     width: 100%;
@@ -8,7 +23,7 @@ body, html {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: #f0f0f0;
+    background-color: var(--background-color);
     font-family: 'Arial', sans-serif;
 }
 
@@ -18,20 +33,20 @@ body, html {
 }
 
 h1 {
-    font-size: 96px;
+    font-size: var(--font-large);
     margin: 0;
 }
 
 p {
-    font-size: 24px;
+    font-size: var(--font-medium);
 }
 
 a {
     display: inline-block;
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: #007bff;
-    color: #ffffff;
+    background-color: var(--primary-color);
+    color: var(--text-color);
     text-decoration: none;
     border-radius: 5px;
 }
@@ -39,10 +54,10 @@ a {
 /* Tablet devices (width from 768px to 1024px) */
 @media (max-width: 1024px) {
     h1 {
-        font-size: 72px;
+        font-size: var(--font-small);
     }
     p {
-        font-size: 20px;
+        font-size: var(--font-small);
     }
 }
 
@@ -53,13 +68,13 @@ a {
         margin: 20px;
     }
     h1 {
-        font-size: 48px;
+        font-size: var(--font-mobile-large);
     }
     p {
-        font-size: 18px;
+        font-size: var(--font-mobile-medium);
     }
     a {
         padding: 8px 16px;
-        font-size: 16px;
+        font-size: var(--font-mobile-small);
     }
 }

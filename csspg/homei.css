@@ -192,16 +192,7 @@ right:9%;
   .bulletin-board {
     animation: fadeIn 2s ease-out; /* Apply the fade-in animation */
   }
-.more-link {
-    color: #00BFFF;
-    text-decoration: none;
-    font-size: 1.2em;
-    transition: color 0.3s ease;
-}
 
-.more-link:hover {
-    color: #fff;
-}
 
 /* Sections */
 section {
