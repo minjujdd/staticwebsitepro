@@ -120,9 +120,81 @@ body {
 }
 
 
-/* Responsive adjustments */
-@media (max-width: 600px) {
+/* Base styles and existing CSS */
+
+/* Your existing CSS rules here... */
+
+/* Tablet-specific styles (screens between 768px and 1024px wide) */
+@media (max-width: 1024px) {
+    body {
+        margin: 50px 25px; /* Adjust body margins for tablet viewing */
+    }
+
+    .nav {
+        flex-direction: row; /* Keep the nav horizontal but adjust spacing */
+        padding: 1rem;
+    }
+
+    .logo {
+        width: 150px; /* Adjust logo size for tablets */
+    }
+
+    .searchgroup {
+        flex-direction: row;
+        margin-top: 0; /* Remove any top margin for the search group */
+    }
+
+    #query, .btn {
+        height: 50px; /* Adjust the height of search input and button */
+    }
+
+    .menu a {
+        padding: 10px; /* Increase padding for easier tapping */
+    }
+
     .grid-container {
-        grid-template-columns: 1fr; /* Stack the images on smaller screens */
+        grid-template-columns: repeat(2, 1fr); /* Two columns for grid items */
+    }
+
+    .compass {
+        width: 20%; /* Adjust the compass image size */
+        left: 40%; /* Center the compass image */
+    }
+}
+
+/* Mobile-specific styles (screens less than 768px wide) */
+@media (max-width: 768px) {
+    body {
+        margin: 20px 10px; /* Adjust body margins for mobile viewing */
+    }
+
+    .nav {
+        flex-direction: column; /* Stack the logo and search bar vertically */
+    }
+
+    .logo {
+        width: 120px; /* Adjust logo size for mobiles */
+    }
+
+    .searchgroup {
+        width: 100%; /* Full width for the search group on mobile */
+    }
+
+    #query, .btn {
+        width: 100%; /* Full width for search input and button */
+        height: 40px; /* Adjust the height */
+    }
+
+    .menu {
+        flex-direction: column; /* Stack menu items vertically */
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr; /* Single column layout for grid items */
+    }
+
+    .compass {
+        width: 30%; /* Adjust the compass image size for smaller screens */
+        left: 35%; /* Adjust positioning to center the image */
     }
 }
