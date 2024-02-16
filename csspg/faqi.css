@@ -1,3 +1,4 @@
+/* Existing styles */
 body {
     font-family: 'Arial', sans-serif;
     padding: 20px;
@@ -26,4 +27,42 @@ h1 {
 
 .faq-container p {
     padding-left: 20px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .faq-container details {
+        padding: 5px;
+    }
+
+    .faq-container p {
+        padding-left: 15px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 1024px) {
+    body {
+        padding: 15px;
+    }
+
+    .faq-container details {
+        margin-bottom: 8px;
+        padding: 8px;
+    }
+
+    .faq-container p {
+        padding-left: 18px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
 }
