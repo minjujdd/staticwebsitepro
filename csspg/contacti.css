@@ -165,36 +165,78 @@ body{
 .button input[type="button"]:hover{
   background: #5029bc;
 }
-@media (max-width: 950px) {
-  .container{
-    width: 90%;
-    padding: 30px 40px 40px 35px ;
+/* Tablet Devices */
+@media (max-width: 1024px) {
+  body {
+    margin: 50px 0; /* Reduce margin */
   }
-  .container .content .right-side{
-   width: 75%;
-   margin-left: 55px;
+
+  .menu {
+    font-size: 18px; /* Adjust font size for better readability */
+    padding: 15px; /* Adjust padding */
+    flex-direction: column; /* Stack menu items vertically */
+    align-items: center; /* Center-align items */
+  }
+
+  .container {
+    width: 80%; /* Increase width to use more screen space */
+    padding: 20px; /* Adjust padding */
+  }
+
+  .container .content {
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center-align the content */
+  }
+
+  .container .content .left-side,
+  .container .content .right-side {
+    width: 100%; /* Full width for both sides */
+  }
+
+  .content .left-side {
+    margin-bottom: 20px; /* Add space between the left and right sides */
+  }
+
+  .container .content .right-side {
+    margin-left: 0; /* Reset margin left */
+  }
 }
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+  body {
+    margin: 20px 0; /* Further reduce margin for mobile */
+  }
+
+  .menu {
+    font-size: 16px; /* Further adjust font size for smaller screens */
+    padding: 10px; /* Reduce padding */
+  }
+
+  .container {
+    width: 95%; /* Use almost the full width of the screen */
+    padding: 15px; /* Adjust padding */
+  }
+
+  .container .content {
+    flex-direction: column; /* Ensure vertical layout */
+  }
+
+  .container .content .left-side,
+  .container .content .right-side {
+    width: 100%; /* Ensure full width usage */
+  }
+
+  .container .content .right-side {
+    margin-left: 0; /* Ensure no margin on the left */
+  }
+  
+  .content .right-side .input-box input,
+  .content .right-side .input-box textarea {
+    font-size: 14px; /* Adjust font size for better readability */
+  }
+  
+  .right-side .button input[type="button"] {
+    padding: 10px 20px; /* Adjust button padding for easier tapping */
+  }
 }
-@media (max-width: 820px) {
-  .container{
-    margin: 40px 0;
-    height: 100%;
-  }
-  .container .content{
-    flex-direction: column-reverse;
-  }
- .container .content .left-side{
-   width: 100%;
-   flex-direction: row;
-   margin-top: 40px;
-   justify-content: center;
-   flex-wrap: wrap;
- }
- .container .content .left-side::before{
-   display: none;
- }
- .container .content .right-side{
-   width: 100%;
-   margin-left:250px;
- }
-} 
