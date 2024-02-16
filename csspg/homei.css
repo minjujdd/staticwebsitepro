@@ -171,14 +171,14 @@ right:9%;
   }
   
   #history{
-    background-image:url('../imgs/GT_flower4.jpeg');
+    background-image:url('../imgs/gb.jpg');
     background-size: cover;
     height:400px;
   }
 
   #history h2,p{
     text-decoration:none;
-    color:white;
+    color:black;
     font-family: 'Protest Strike', sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -193,6 +193,9 @@ right:9%;
     animation: fadeIn 2s ease-out; /* Apply the fade-in animation */
   }
 
+  #contact{
+    background-image: url('../imgs/gc.jpg')
+   }
 
 /* Sections */
 section {
@@ -248,7 +251,7 @@ footer img {
     .bulletin-board, footer img {
         display: none; /* Hide elements that may not fit well on small screens */
     }
-   
+  
 }
 
 /* Tablets (portrait and landscape) ----------- */
